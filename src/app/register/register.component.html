@@ -1,0 +1,139 @@
+<body>
+  <div class="container-fluid main">
+    <div class="row">
+      <form class="login-form">
+        <h2>REGISTER</h2>
+        <div *ngIf="errorResponse" style="color: red">
+          {{ errorMessage }}
+        </div>
+        <fieldset>
+          <div class="row">
+            <div class="mb-3">
+              <label for="inputUserName" class="form-label">User Name </label>
+             
+             
+              <input
+                type="text"
+                class="form-control"
+                id="inputUserName"
+                name="userName"
+                [(ngModel)]="name"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputFirstName" class="form-label"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputFirstName"
+                  name="firstName"
+                  [(ngModel)]="firstName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  name="email"
+                  [(ngModel)]="email"
+                  required
+                />
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  name="password"
+                  [(ngModel)]="password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="inputLastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputLastName"
+                  name="lastName"
+                  [(ngModel)]="lastName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPhoneNumber" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="inputPhoneNumber"
+                  name="phoneNumber"
+                  [(ngModel)]="phoneNumber"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  name="password"
+                  [(ngModel)]="confirmPassword"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-between">
+            <div class="col-md-4">
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="register()"
+                [disabled]="isLoading"
+              >
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+                {{ isLoading ? 'Registering...' : 'Register' }}
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button type="reset" class="btn button-reset">Reset</button>
+            </div>
+            <div class="col-md-4">
+              <button
+                type="button"
+                class="btn btn-info button-info"
+                routerLink="/login"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+ 
+<!-- <footer class="text-center text-white" style="background-color: grey;width: 100%;position: fixed;height: 30px;">
+  <a class="text-white" href="https://mdbootstrap.com/"> © 2024 Copyright: GEN AI CHAT BOT</a>
+</footer> -->
