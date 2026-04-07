@@ -1,0 +1,93 @@
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+<body>
+  <div class="main-wrapper">
+   
+    <div class="monkey-thought" #monkeyThought>
+      <div class="buble-1"></div>
+      <div class="monkey-comment" #monkeyComment>
+        <p>Is it an email?</p>
+      </div>
+    </div>
+  <div class="img-wrapper" id="img-wrapper">
+  <div class="monkey-face" #monkeyFace>
+    <img src="../assets/chatbot1.png" alt="face">
+    <div class="eyes-wrapper">
+      <div class="eyes">
+        <div class="eye-brow" #monkeyEyesBrows></div>
+      <div class="eye-ball"></div>
+    </div>
+  <div class="eyes">
+    <div class="eye-brow" #monkeyEyesBrows></div>
+    <div class="eye-ball"></div>
+  </div>
+</div>
+</div>
+  <img class="monkey-hand" #monkeyHand src="assets/hand.png" alt="hand">
+  </div>
+  <div class="container-fluid main">
+  <div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+  <form class="login-form" (submit)="handleSubmit($event)" #loginForm="ngForm">
+  <!-- <h1>Login</h1> -->
+  <fieldset>
+  <div class="input-container">
+  <label for="exampleInputEmail1" class="form-label">Email address</label>
+  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    name="email"
+                    [(ngModel)]="email"
+                    (input)="handleEmailInput($event)"
+                    #emailInput="ngModel"
+                    required
+                  />
+  <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="input-container">
+  <label for="inputPassword" class="form-label">Password</label>
+  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword"
+                    name="password"
+                    [(ngModel)]="password"
+                    #passwordInput="ngModel"
+                    required
+                  />
+  <div id="passwordHelp" class="form-text"></div>
+  </div>
+  <div class="row">
+  <div class="col-12 text-center">
+  <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+    <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    {{ isLoading ? 'Logging in...' : 'Submit' }}
+  </button>
+  </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+  <div class="col-md-12 text-center">
+  <a routerLink="/Register">Register Here</a>
+  </div>
+  </div>
+  <div class="row justify-content-center mt-1">
+  <div class="col-md-12 text-center">
+  <a href="#" style="font-size: 0.85rem; color: #555;">Forgot Password?</a>
+  </div>
+  </div>
+  </fieldset>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>
+  <!-- <footer class="text-center text-white" style="background-color: grey;width: 100%;position: fixed;height: 30px;">
+    <a class="text-white" href="https://mdbootstrap.com/"> © 2024 Copyright: GEN AI CHAT BOT</a>
+  </footer> -->
+  
