@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<table id="tableid" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Application Name</th>
+        <th>Url</th>
+        <th>API Key</th>
+        <th>API Provider</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doc of uploadDocuments">
+        <td>{{ doc.id }}</td>
+        <td>{{ doc.applicationName }}</td>
+        <td>{{ doc.url }}</td>
+        <td>{{ doc.apiKey }}</td>
+        <td>{{ doc.apiProvider }}</td>
+        <td>
+          <button class="btn" (click)="display(doc.id)"><i class="material-icons">bar_chart</i></button>
+          <button class="btn" (click)="deleteId(doc.id)"><i class="material-icons">delete</i></button>
+          <button class="btn" (click)="showUpdateForm(doc)"><i class="material-icons">edit</i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="d-flex justify-content-center mt-3">
+    <button type="submit" class="btn btn-primary col-sm-1" id="backbtn" (click)="navigateToBack()">BACK</button>
+  </div>
+  <div *ngIf="con && show" class="modal-overlay"> 
+    <div class="modal-content">
+    <h3 style="align-self: center;">Document Details</h3> 
+    <tbody>
+    <p><strong>User ID:</strong> {{ show.user.id }}</p>  
+    <p><strong>UserName:</strong> {{ show.user.userName }}</p> 
+    <p><strong>FirstName:</strong> {{ show.user.firstName }}</p> 
+    <p><strong>LastName:</strong> {{ show.user.lastName }}</p>
+    <p><strong>Document ID:</strong> {{ show.id }}</p> 
+    <p><strong>Application Name:</strong> {{ show.applicationName }}</p> 
+    <p><strong>Url:</strong> {{ show.url }}</p>
+    <p><strong>API Key:</strong> {{ show.apiKey }}</p> 
+    <p><strong>API Provider:</strong> {{ show.apiProvider }}</p> 
+    <button class="btn btn-primary col-sm-3 text-center" style="align-self: center; align-self:flex-end;" (click)="noDisplay()">Hide</button> 
+  </tbody>
+  </div>
+  </div>
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'d-block': showUpdateFormFlag}">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Update Document</h5>
+    <button type="button" class="close" aria-label="Close" (click)="closeUpdateForm()" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:1.5rem; cursor:pointer;">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <form (ngSubmit)="updateDocument()">
+    <div class="form-group">
+    <label for="prompt">Prompt</label>
+    <input type="text" id="prompt" class="form-control" [(ngModel)]="selectedDocument.prompt" name="prompt">
+    </div>
+    <div class="form-group">
+    <label for="url">URL</label>
+    <input type="text" id="url" class="form-control" [(ngModel)]="selectedDocument.url" name="url">
+    </div>
+    <div class="form-group">
+    <label for="apiKey">API Key</label>
+    <input type="text" id="apiKey" class="form-control" [(ngModel)]="selectedDocument.apiKey" name="apiKey">
+    </div>
+    <div class="form-group">
+    <label for="apiProvider">API Provider</label>
+    <input type="text" id="apiProvider" class="form-control" [(ngModel)]="selectedDocument.apiProvider" name="apiProvider">
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
