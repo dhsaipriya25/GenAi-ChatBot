@@ -1,1 +1,76 @@
-
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/upload-documents">Upload</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/history/{{userName}}">List</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav ms-auto"> <li class="nav-item">
+      <a class="nav-link" (click)="logout()" routerLink="/Home">Logout</a>
+    </li>
+    </ul>
+  </div>
+</nav>
+<body>
+<div class="toolbar">
+    <h1>Gen AI Chatbot Dashboard</h1>
+    </div>
+     
+    <div class="dashboard-container">
+    <div class="section">
+    <div class="text">
+    <h2>Welcome to Gen AI Chatbot</h2>
+    <br>
+    <p>A chatbot is essentially a computer program designed to simulate human conversation.
+      It can interact with users through text providing information, completing tasks, or engaging in casual conversation.
+    </p>
+    </div>
+    <div class="image">
+    <img src="https://www.zfort.com/media/cache/blogArticle/images/blog/5ece5dfcccab1_top_10_AI_chatbots.jpg" alt="Chatbot Image 1">
+    </div>
+    </div>
+     
+    <div class="section">
+    <div class="text">
+    <h2>Get Started</h2>
+    <br>
+    <!--<p>Upload your files to begin interacting with our chatbot. Our system supports various file formats.</p> -->
+    <img id="image1" src="assets/steps.png" width="500" height="200">
+   
+    </div>
+    <div class="text1">
+      <h2>Steps for Upload a documents</h2>
+      <p>Step 1:Start a new Chatbot---Click the "UPLOAD File"  button to start the process.</p>
+      <p>Step 2:Upload your Documents---Here you can upload the documents you want your chatbot to use. It supports formats like PDF,DOC,TXT. Select and upload your documents here. And provide specific API Key, Application name, Prompt and soo on like required fields.</p>
+      <p>Step 3:Acknowledge page---After clicking on submit button in upload documents page then you will redirect to Acknowledge page, in that you got all the details which you entered in upload documents page and it will generate one Unique ID along that details.Based on that Unique ID your Chatbot starts.</p>
+      <p>Step 4:Build the chatbot--- Once your documents are uploaded, click "Submit" to build your chatbot. This involves processing your documents to create a searchable database for your uploaded files effectively.</p>
+      <p>Step 5:Interact with Your Chatbot---When the chatbot is ready. you'll be taken to a chat interface where you can ask questions about your uploaded documents. </p>
+    </div>
+    </div>
+      <!-- <div class="upload-section">
+        <br>
+    <button class="upload-button" (click)="navigateToUpload()">Upload File</button>
+    </div> -->
+    <div class="text1">
+      <h2>Key Points</h2>
+      <br>
+      <p>API KEY--- unique codes that are passed to APIs to identify the applications, users, or developers that are making calls.</p>
+      <p>URL--- A URL (Uniform Resource Locator) is a unique identifier used to locate a resource on the Internet. </p>
+      <p>FILE--The input file can be PDF, DOC,TXT etc.. based on that Chatbot will the analyze your file and answer your question</p>
+      <p>APPLICATION NAME--- Application Name must be the file name</p>
+      <p>PROMPTS---By default we have to some prompts related to your file name and application name. </p>
+      </div>
+    </div>
+   
+     
+</body>
+<footer class="text-center text-white" style="background-color: grey;width: 100%;position: fixed;height: 30px;">
+  <a class="text-white" href="https://mdbootstrap.com/"> © 2024 Copyright: GEN AI CHAT BOT</a>
+</footer>
