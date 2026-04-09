@@ -1,1 +1,61 @@
-
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+    <h3 class="mb-4">Submitted Details</h3>
+    <div class="card p-4">
+    <div class="text-left mb-4">
+    <table class="table table-striped">
+    <tbody>
+    <tr>
+    <th scope="row">Username</th>
+    <td>{{ formData.get('userName') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">Application Name</th>
+    <td>{{ formData.get('applicationName') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">URL</th>
+    <td>{{ formData.get('url') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">API Key</th>
+    <td>{{ formData.get('apiKey') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">API Provider</th>
+    <td>{{ formData.get('apiProvider') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">Prompt</th>
+    <td>{{ formData.get('prompt') }}</td>
+    </tr>
+    <tr>
+    <th scope="row">Unique Id</th>
+    <td>{{ formData.get('userName') + formData.get('applicationName') }}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <div class="text-center mb-4">
+    <button (click)="onButtonClick()" class="btn btn-primary">
+                {{ isRunning ? 'Running...' : 'Start' }}
+    </button>
+    </div>
+    <div *ngIf="response">
+    <div class="alert alert-info text-left">
+    <strong>Response:</strong>
+    <table class="table table-sm mt-2 mb-0">
+      <tbody>
+        <tr *ngFor="let entry of response | keyvalue">
+          <th style="width:40%; text-transform: capitalize;">{{ entry.key }}</th>
+          <td style="word-break: break-all;">{{ entry.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
