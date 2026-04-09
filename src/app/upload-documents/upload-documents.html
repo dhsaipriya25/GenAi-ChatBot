@@ -1,1 +1,83 @@
-
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <h3>Upload Details</h3>
+      <div class="card">
+        <h5 class="text-center mb-4">Powering world-class companies</h5>
+        <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3">Username <span class="text-danger">*</span></label>
+              <input type="text" formControlName="userName" placeholder="Enter your UserName">
+              <div *ngIf="uploadForm.get('userName')?.touched && uploadForm.get('userName')?.invalid" class="text-danger">
+                Username is required
+              </div>
+            </div>
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3">Application Name<span class="text-danger">*</span></label>
+              <input type="text" formControlName="applicationName" placeholder="Enter Application name">
+              <div *ngIf="uploadForm.get('applicationName')?.touched && uploadForm.get('applicationName')?.invalid" class="text-danger">
+                Application name is required
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-12 flex-column d-flex">
+              <label class="form-control-label px-3">URL<span class="text-danger">*</span></label>
+              <input type="text" formControlName="url" placeholder="Enter URL">
+              <div *ngIf="uploadForm.get('url')?.touched && uploadForm.get('url')?.invalid" class="text-danger">
+                Valid URL is required
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-12 flex-column d-flex">
+              <label class="form-control-label px-3">API Key<span class="text-danger">*</span></label>
+              <input type="text" formControlName="apiKey" placeholder="Enter API key">
+              <div *ngIf="uploadForm.get('apiKey')?.touched && uploadForm.get('apiKey')?.invalid" class="text-danger">
+                API key is required
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Upload Files</label>
+            <button type="button" class="btn btn-secondary add-btn" (click)="addFileInput()">+ Add File</button>
+            <div formArrayName="files">
+              <div *ngFor="let fileControl of files.controls; let i = index" class="file-input-container">
+                <input type="file" (change)="onFileChange($event, i)" class="form-control">
+                <button type="button" class="btn btn-danger remove-btn" (click)="removeFileInput(i)" *ngIf="files.length > 1">&times; Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-12 flex-column d-flex">
+              <label class="form-control-label px-3">Prompt<span class="text-danger">*</span></label>
+              <textarea formControlName="prompt" required></textarea>
+              <div *ngIf="uploadForm.get('prompt')?.touched && uploadForm.get('prompt')?.invalid" class="text-danger">
+                Prompt is required
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-start">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="row justify-content-start"> API Provider</label>
+              <select formControlName="apiProvider">
+                <option value="openai">OpenAI</option>
+                <option value="gemini" selected>Gemini</option>
+              </select>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="form-group col-sm-4"> <button type="submit" class="btn-block btn-primary"(click)="navigateToBack()">BACK</button> </div>  
+            <div class="form-group col-sm-4"> <button type="submit" class="btn-block btn-primary">SUBMIT</button> </div>
+          </div>
+          <div class="container mt-5" *ngIf="message">
+            <div [ngClass]="{'alert-success': success, 'alert-danger': success === false}">
+              {{ message }}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
