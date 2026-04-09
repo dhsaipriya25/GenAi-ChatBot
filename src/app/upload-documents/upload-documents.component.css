@@ -1,0 +1,381 @@
+/* h2 {
+  margin-bottom: 15px;
+  color: #00204d;
+}
+ 
+input[type="file"], input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+}
+ 
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1a3f72;
+  color: white;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #154070;
+}
+ 
+button:focus {
+  outline: none;
+}
+ 
+p {
+  color: green;
+}
+body{
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-size: 100% 100%
+  
+}
+  .card{
+    padding: 15px 80px;
+    margin-top: 30px;
+    background-color: rgb(237, 247, 255); 
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.5)
+    
+  }
+  .blue-text{
+    color: #00BCD4
+  }
+  .form-control-label
+  {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-style: normal;
+  }
+  input, textarea, button{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 10px !important;
+    font-weight: 300
+  }
+  input:focus, textarea:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400
+  }
+  .btn-block{
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer
+  }
+  .btn-block:hover{
+    color: #fff !important
+  }
+  button:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+  }
+#apiProvider{
+  width: 250px;
+  height: 30px;
+}
+
+option{
+  font-size: medium;
+} */
+
+/* @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
+
+h2 {
+  margin-bottom: 15px;
+  color: #00204d;
+}
+ 
+.file-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+ 
+.file-input-container input {
+  flex-grow: 1;
+}
+ 
+.file-input-container button {
+  margin-left: 0px;
+}
+ 
+input[type="file"], input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+}
+ 
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1a3f72;
+  color: white;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #154070;
+}
+ 
+button:focus {
+  outline: none;
+}
+ 
+p {
+  color: green;
+}
+ 
+body{
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+ 
+  background-size: 100% 100%
+ 
+}
+  .card{
+    padding: 15px 80px;
+    margin-top: 30px;
+    background-color: rgb(237, 247, 255);
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.5)
+   
+  }
+  .blue-text{
+    color: #00BCD4
+  }
+  .form-control-label
+  {
+    margin-bottom: 0
+  }
+  input, textarea, button{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 10px !important;
+    font-weight: 300
+  }
+  input:focus, textarea:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400
+  }
+  .btn-block{
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer
+  }
+  .btn-block:hover{
+    color: #fff !important
+  }
+  button:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+  }
+ 
+  .alert-success {
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
+ 
+  .alert-danger {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  } */
+
+  @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
+   
+  h2 {
+    margin-bottom: 15px;
+    color: #00204d;
+  }
+   
+  .file-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+   
+  .file-input-container input {
+    flex-grow: 1;
+  }
+   
+  .file-input-container .remove-btn {
+    margin-left: 10px;
+    height: 34px;
+    padding: 5px 10px;
+    margin-bottom: 16px;
+   
+   
+  }
+   
+  input[type="file"], input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    box-sizing: border-box;
+  }
+   
+  button {
+    display: inline-block;
+   
+   
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1a3f72;
+    color: white;
+    cursor: pointer;
+  }
+   
+  button:hover {
+    background-color: #154070;
+  }
+   
+  button:focus {
+    outline: none;
+  }
+   
+  .add-btn {
+     
+   
+    padding-top: 5px 10px;
+   
+    padding-bottom: 20px;
+    margin-left: 10px;
+    height: 34px;
+    color: white;
+    margin-bottom: 15px;
+   
+  }
+   
+  p {
+    color: green;
+  }
+   
+  body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-size: 100% 100%;
+  }
+   
+  .card {
+    padding: 15px 80px;
+    margin-top: 30px;
+    background-color: rgb(237, 247, 255);
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5);
+  }
+   
+  .blue-text {
+    color: #00BCD4;
+  }
+   
+  .form-control-label {
+    margin-bottom: 0;
+  }
+   
+  input, textarea, button {
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 10px !important;
+    font-weight: 300;
+  }
+   
+  input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+  }
+   
+  .btn-block {
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer;
+  }
+   
+  .btn-block:hover {
+    color: #fff !important;
+  }
+   
+  button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+   
+  .alert-success {
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
+   
+  .alert-danger {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
+   
