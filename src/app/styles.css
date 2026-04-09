@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ===== Global Variables ===== */
+:root {
+  /* Colors */
+  --color-primary:      #00204d;
+  --color-primary-hover:#1a3f72;
+  --color-accent:       #1a90c8;
+  --color-accent-hover: #1278aa;
+  --color-bg-light:     #f6fbff;
+  --color-text:         #1e293b;
+  --color-text-muted:   #64748b;
+  --color-danger:       #dc3545;
+  --color-success:      #28a745;
+
+  /* Fonts */
+  --font-body:     'Plus Jakarta Sans', sans-serif;
+  --font-heading:  'Space Grotesk', sans-serif;
+}
+
+/* ===== Global Font Application ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--font-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+p, span, label, input, textarea, select, button, a, td, th, li {
+  font-family: var(--font-body) !important;
+}
+
+/* Slightly tighten body text */
+p { line-height: 1.7; }
+
+/* Inputs feel more modern */
+input, textarea, select {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em;
+}
+
+/* Buttons */
+button, .btn {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ===== Spinner utility (Bootstrap 4 doesn't include it) ===== */
+.spinner-border {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+.spinner-border-sm {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-width: 0.12em;
+}
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+.me-1 { margin-right: 0.25rem; }
+.me-2 { margin-right: 0.5rem; }
